@@ -7,21 +7,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_NPW3fyYbmansfNlNXqJhm");
+})();
+</script>
 <script type="text/javascript">
     function sendEmailRequest(){
-        Email.send({
-            Host:"smtp.gmail.com",
-            Username: "iosiftsilidis1996@gmail.com",
-            Password: "Iosif1996,",
-            To:"tsilidis_iosif@hotmail.com",
-            From:"iosiftsilidis1996@gmail.com",
-            Subject:"Test Email!!!",
-            Body:"EaSy HehEHehE"
-        })
-        .then(function (message) {
-          alert("mail sent successfully")
-        });
+        var parms = {
+            from_name: "Joseph",
+            to_name: "FuckYou",
+            message: "Hope doing great"
+        };
+        
+        emailjs.send('gmail','template_irh95ew',params)
+        .then(function(message) {
+            alert('mail sent successfully!!')
+         });
     }
 </script>
 </head>
