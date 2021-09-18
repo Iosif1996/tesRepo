@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wha?</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+    function sendEmailRequest(){
+        Email.send({
+            //SecureToken:"d4639cce-4540-48d1-a8ce-e23edb74f250",
+            Host:"smtp.gmail.com",
+            Username: "iosiftsilidis1996@gmail.com",
+            Password: "Iosif1996,",
+            To:"iosiftsilidis1996@gmail.com",
+            From:"iosiftsilidis1996@gmail.com",
+            Subject:"Test Email!!!",
+            Body:"EaSy HehEHehE"
+        })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+    }
+</script>
+</head>
+<body style="background-color:rgb(77,181,173);font-family: 'Lemon', cursive;">
+
+<div style="width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;color:#fcfcfc;letter-spacing:2px;">
+<h1> TESTING THE SHIT OUT OF IT </h1>
+<form method="post">
+    <input type="button" value="Send Email" 
+        onclick="sendEmail()" />
+  </form>
+</div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
