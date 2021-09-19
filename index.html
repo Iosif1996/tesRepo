@@ -12,7 +12,7 @@
         var link = "mailto:tsilidis_iosif@hotmail.com"
              + "?cc=iosiftsilidis1996@gmail.com"
              + "&subject=" + encodeURIComponent("This is my subject")
-             + "&body=" + "Hello";
+             + "&body=" + document.querySelector("#messageArea").value;
     
         window.location.href = link;
     }
@@ -20,14 +20,16 @@
 </head>
 <body style="background-color:rgb(77,181,173);font-family: 'Lemon', cursive;">
 
-<div style="width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;color:#fcfcfc;letter-spacing:2px;">
+<div style="width:100vw;height:100vh;display:grid;align-items:center;justify-content:center;color:#fcfcfc;letter-spacing:2px;">
 <h1> TESTING THE SHIT OUT OF IT </h1>
-<form method="post">
-    <input type="button" value="Send Email" 
+<form method="post" style="display: grid;padding: 12px;">
+    <label style="font-size: 12px;">Body</label>
+    <textarea id="messageArea" rows="4" cols="50" name="comment" placeholder="Message" style="height:20vh;margin-bottom: 12px;width:50vh"></textarea>
+    <!-- <input type="text" name="message" style="height:20vh;margin-bottom: 12px;"> -->
+    <input type="button" style="width:80px;height:35px" value="Send Email" 
         onclick="sendEmailRequest()" />
-  </form>
+</form>
 </div>
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
